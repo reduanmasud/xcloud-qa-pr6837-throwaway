@@ -4,4 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8090:80"
+      - "${HOST_PORT}:80"
+  admin:
+    image: nginx:alpine
+    ports:
+      - "8095:80"
